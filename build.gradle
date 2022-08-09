@@ -13,6 +13,12 @@ repositories {
 dependencies {
     implementation 'io.appium:java-client:7.1.0'
     implementation 'org.testng:testng:7.5'
+
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
 
 test {
