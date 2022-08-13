@@ -27,7 +27,7 @@ public class DeleteEvent extends Configuration {
         new HomeScreen(driver)
                 .findEvent();
         new EditCreateEventScreen(driver).deletePastEvent();
-   
+
     }
 
     @AfterClass

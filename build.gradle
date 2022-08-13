@@ -13,6 +13,7 @@ repositories {
 dependencies {
     implementation 'io.appium:java-client:7.1.0'
     implementation 'org.testng:testng:7.5'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
 
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
