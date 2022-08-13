@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SplashScreen extends BaseScreen{
     public SplashScreen(AppiumDriver<MobileElement> driver) {
+
         super(driver);
     }
 

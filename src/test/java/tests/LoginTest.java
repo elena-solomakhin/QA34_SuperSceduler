@@ -5,10 +5,9 @@ import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
 import screens.HomeScreen;
 import screens.LoginScreen;
-import screens.SplashScreen;
+
 
 public class LoginTest extends Configuration {
     @Test

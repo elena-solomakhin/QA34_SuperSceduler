@@ -25,6 +25,12 @@ public class EditCreateEventScreen extends BaseScreen{
     MobileElement wageSave;
     @FindBy(xpath = "//*[@resource-id='com.example.svetlana.scheduler:id/info_save_btn']")
     MobileElement confirmCreation;
+    @FindBy(xpath = "//*[@resource-id='com.example.svetlana.scheduler:id/delete_menu']")
+    MobileElement canGarbage;
+    public HomeScreen deletePastEvent(){
+        canGarbage.click();
+        return new HomeScreen(driver);
+    }
 
 public HomeScreen createNewEvent(Event event){
     should(title,5);
