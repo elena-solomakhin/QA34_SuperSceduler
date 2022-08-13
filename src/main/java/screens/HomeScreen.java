@@ -17,6 +17,13 @@ public class HomeScreen extends BaseScreen{
     @FindBy(xpath = "//*[@resource-id='com.example.svetlana.scheduler:id/nav_fr_logout']")
     MobileElement logoutButton;
 
+    @FindBy(xpath = "//*[@resource-id='com.example.svetlana.scheduler:id/fab_add_event']")
+    MobileElement fabAddEvent;
+    public EditCreateEventScreen initCreationEvent(){
+        fabAdd.click();
+        fabAddEvent.click();
+        return new EditCreateEventScreen(driver);
+    }
 
     public HomeScreen checkFabButtonPresent() {
     should(fabAdd,10);
@@ -28,11 +35,17 @@ public class HomeScreen extends BaseScreen{
         return fabAdd.isDisplayed();
     }
     public HomeScreen openMenu(){
-        burgerMenu.click();
+        if(isDisplayedWithExp(burgerMenu)) {
+            burgerMenu.click();
+        }
         return this;
     }
-    public  LoginScreen logout(){
-        logoutButton.click();
-        return new LoginScreen(driver) ;
+
+    public LoginScreen logout(){
+        if(isDisplayedWithExp(logoutButton)) {
+            logoutButton.click();
+        }
+        return new LoginScreen(driver);
     }
+
 }
