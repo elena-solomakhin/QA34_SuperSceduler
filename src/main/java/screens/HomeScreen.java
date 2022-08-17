@@ -25,9 +25,10 @@ public class HomeScreen extends BaseScreen {
     @FindBy(xpath = "//*[@resource-id='com.example.svetlana.scheduler:id/row_container_main']")
     List<MobileElement> list;
 
-    public HomeScreen findEvent(){
-list.get(0).click();
-        return this;
+    public EditCreateEventScreen findEvent(){
+
+        list.get(0).click();
+        return new EditCreateEventScreen(driver);
     }
     public EditCreateEventScreen initCreationEvent() {
         fabAdd.click();
